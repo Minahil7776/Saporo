@@ -66,16 +66,14 @@
     text-transform: uppercase;
     background: brown;
     color: white;
-    padding: 8px 12px;
+    padding: 8px 10px;
     border-radius: 6px;
-    border: none;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
   }
 
-  .add-btn a{
-    color: white;
-    text-decoration: none;
-  }
+
   
   /* HOVER EFFECT */
   .category-card:hover .category-price {

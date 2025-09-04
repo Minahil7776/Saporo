@@ -41,6 +41,7 @@ export default function Login() {
 
           <div className='input-fields'>
             <input
+            name='username'
               type='text'
               placeholder='UserName'
               value={username}
@@ -51,7 +52,8 @@ export default function Login() {
             />
             <input
               type='password'
-              placeholder='Password'
+              name = 'password'
+              placeholder='Password' 
               autoComplete='new-password'
               value={password}
               minLength={8}

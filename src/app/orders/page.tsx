@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "./orders.css";
-import Order from "@/models/Order";
 
 type Order = {
   orderId: string;
@@ -12,24 +11,41 @@ type Order = {
 };
 
 function OrdersPage() {
- const [orders, setorder] = useState<Order[]>([]);
+  const [orders, setorder] = useState<Order[]>([]);
 
- useEffect(()=>{
-  const fetchOrders = async ()=>{
-    try{
-      const res = await fetch("/api/order");
-      const data = await res.json();
-      if(data.success){
-        setorder(data.orders);
-      }
-      
-    }
-    catch (err) {
+  useEffect(() => {
+    const fetchOrders = async () => {
+      try {
+        const res = await fetch("/api/order");
+        const data = await res.json();
+        if (data.success) {
+          setorder(data.orders);
+        }
+      } catch (err) {
         console.error("Failed to fetch orders:", err);
       }
+    };
+    fetchOrders();
+  }, []);
+
+  if (orders.length === 0) {
+    return (
+      <h1
+        className="empty-orders"
+        style={{
+          height: "80vh",
+          color: "brown",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: typeof window !== "undefined" && window.innerWidth < 600 ? "3rem" : "6rem",
+          textAlign:'center'
+        }}
+      >
+        No orders found
+      </h1>
+    );
   }
-  fetchOrders();
- },[]);
 
   return (
     <div className="orders-container">
@@ -40,7 +56,7 @@ function OrdersPage() {
             <th>Order ID</th>
             <th>Date</th>
             <th>Price</th>
-            <th>Status</th>
+            <th>Products</th>
             <th>Delivery</th>
           </tr>
         </thead>

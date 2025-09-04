@@ -64,11 +64,12 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div className={`mobile-menu ${isOpen ? "active" : ""}`}>
-        <Link href="/">Home</Link>
-        <Link href="/menu">Menu</Link>
-        <Link href="/contact">Contact</Link>
-        <Link href="/orders">Orders</Link>
-        <Link href="/cart">Cart</Link>
+         <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
+  <Link href="/menu" onClick={() => setIsOpen(false)}>Menu</Link>
+  <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+  <Link href="/orders" onClick={() => setIsOpen(false)}>Orders</Link>
+  <Link href="/cart" onClick={() => setIsOpen(false)}>Cart</Link>
+
         {session ? (
           <button
             onClick={() => { signOut({callbackUrl:"/"})}}

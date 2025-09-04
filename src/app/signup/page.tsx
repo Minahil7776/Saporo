@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { ReactEventHandler, useState } from 'react';
 import Link from 'next/link';
 import { FaGoogle, FaFacebookF } from 'react-icons/fa';
 import "../login/login.css";
@@ -12,25 +12,24 @@ export default function Signup() {
 
   const router = useRouter();
 
-  const handleSignup = async () => {
-    const res = await fetch("/api/signup", {
-      method: "POST",
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password }),
-    });
+const handleSignup = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    const data = await res.json();
-    if (res.ok) {
-      setUsername('');
-      setPassword('');
-      toast.success("SignUp successful!", {
-  duration: 4000, // time in ms (3000ms = 3s)
-});
-      router.push("/login");
-    } else {
-      toast.error(`SigunUp faild ${data.error}`,{duration:4000})
-  };
+  const res = await fetch("/api/signup", {
+    method: "POST",
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, password }),
+  });
+
+  const data = await res.json();
+
+  if (res.ok) {
+   toast.success("SignUp Successfull");
+      router.push("/login"); 
+  } else {
+    toast.error(`Signup failed: ${data.error}`, { duration: 4000 });
   }
+};
   return (
     <form onSubmit={handleSignup}>
       <div className='login'>
