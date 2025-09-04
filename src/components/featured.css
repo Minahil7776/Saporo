@@ -1,0 +1,106 @@
+.featured{
+  min-height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(255, 241, 241);
+        overflow-x: auto; /* horizontal scroll */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card{
+  flex: 0 0 auto; 
+    min-width: 34%;
+  min-width: 34%; /* Or desired width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 3;
+  color: brown;
+  padding: 2%;
+}
+
+.card:hover{
+    background-color: rgb(255, 212, 212);
+}
+
+.card-title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card-desc{
+    margin: 10% 0%;
+}
+
+.card-price{
+    font-weight: bold;
+}
+
+.card-btn button {
+  padding: 10px 20px;
+background-color: brown;
+border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-top: 10%;
+}
+
+
+.card-img {
+    position: relative;
+    height: 350px;
+    width: 350px;
+    margin-bottom: 20%;
+}
+
+.card-img image{
+    object-fit: cover;
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+  .card {
+    min-width: 300px;
+    max-width: 300px;
+    padding: 16px;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-img {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-width: 300px;
+    max-width: 300px;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-desc {
+    font-size: 0.9rem;
+  }
+
+  .card-btn button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .card-img {
+    height: 180px;
+    width: 180px;
+  }
+}

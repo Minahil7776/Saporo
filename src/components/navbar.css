@@ -1,0 +1,131 @@
+.nav-offer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5vh;
+  width: 100%;
+  background-color: brown;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  height: 9vh;
+  width: 100%;
+  border-bottom: 1px solid brown;
+  color: brown;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  font-size: large;
+  position: relative;
+}
+
+/* Each section (left, center, right) */
+.nav-left,
+.nav-center,
+.nav-right {
+  flex: 1; /* equal space */
+  display: flex;
+  align-items: center;
+}
+
+/* Center logo */
+.nav-center {
+  justify-content: center;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+/* Left links */
+.nav-left {
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+/* Right links */
+.nav-right {
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* Reset link styles */
+.nav-left a,
+.nav-right a {
+  color: brown;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-btn{
+  color: brown;
+  font-weight: bold;
+  border:none;
+  font-size: large;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* ===== Hamburger ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background-color: brown;
+  border-radius: 2px;
+}
+
+/* ===== Mobile Menu ===== */
+.nav-offer{
+  text-align: center;
+}
+.mobile-menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  background-color: white;
+  position: absolute;
+  top: 12vh;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  border-top: 1px solid brown;
+}
+
+
+
+.mobile-menu a {
+  color: brown;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nav-left,
+  .nav-right {
+    display: none; /* hide links */
+  }
+
+  .hamburger {
+    display: flex; /* show hamburger */
+    margin-left: auto;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+}

@@ -1,0 +1,88 @@
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    color: #a52a2a; /* red-500 */
+    position:relative;
+    min-height: 80vh;
+    max-height:100%;
+  }
+  .category-card {
+    width: 100%;
+    height: 60vh;
+    border-right: 2px solid brown;
+    border-bottom: 2px solid brown;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+  }
+  
+  @media (min-width: 640px) {
+    .category-card {
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .category-card {
+      width: 33.33%;
+    }
+  }
+  
+  /* IMAGE */
+  .category-image-container {
+    position: relative;
+    height: 80%;
+  }
+  
+  .category-image {
+    object-fit: contain;
+  }
+  
+  /* FOOTER */
+  .category-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  
+  .category-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 8px;
+  }
+  
+  .category-price {
+    font-size: 18px;
+  }
+  
+  .add-btn {
+    display: none;
+    text-transform: uppercase;
+    background: brown;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .add-btn a{
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* HOVER EFFECT */
+  .category-card:hover .category-price {
+    display: none;
+  }
+  
+  .category-card:hover .add-btn {
+    display: block;
+  }
+  

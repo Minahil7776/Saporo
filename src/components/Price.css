@@ -1,0 +1,110 @@
+/* Main container */
+.price-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  gap: 1rem;
+}
+
+/* Price text */
+.price-total {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4b2e2e; /* dark brown */
+}
+
+/* Options */
+.options-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.option-btn {
+  min-width: 6rem;
+  padding: 0.5rem;
+  border: 1px solid #a0522d; /* sienna brown */
+  border-radius: 6px;
+  background: white;
+  color: brown; /* coffee brown */
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.option-btn.active {
+  background: brown; /* sienna */
+  color: white;
+}
+
+/* Bottom (quantity + cart) */
+.bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.quantity-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid brown; /* saddle brown */
+  font-weight: 500;
+}
+
+.quantity-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.quantity-controls button{
+    border: none;
+    font-size: large;
+    color: brown;
+}
+
+.cart-btn {
+  text-transform: uppercase;
+  width: 14rem;
+  background: brown; /* saddle brown */
+  color: white;
+  padding: 0.95rem;
+  border: 1px solid #8b4513;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cart-btn:hover {
+  background: #3f1908; /* coffee brown */
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+  .bottom-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cart-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .price-total {
+    font-size: 1.4rem;
+  }
+
+  .option-btn {
+    min-width: auto;
+    flex: 1;
+    text-align: center;
+  }
+
+  .quantity-box {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

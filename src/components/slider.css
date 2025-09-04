@@ -1,0 +1,79 @@
+.slider{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(243, 234, 234);
+}
+
+.slide-left{
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+    width: 50%;
+    padding: 8%;
+}
+
+.slide-left h1{
+    font-size: 3.5rem;
+    text-align: center;
+    color: brown;
+}
+
+.order-btn{
+    margin-top: 10%;
+}
+
+.order-btn button{
+    border: none;
+    background-color: brown;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sliding-pic{
+    position: relative;
+    width: 55%;
+    height:90vh;
+}
+
+.sliding-pic image{
+    object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .slider {
+    flex-direction: column;
+    height: auto;
+    overflow-y: visible;
+  }
+
+  .slide-left {
+    width: 100%;
+    height: 44vh;
+    padding: 10%;
+    order: 1;
+    text-align: center;
+  }
+
+  .sliding-pic {
+    width: 100%;
+    height: 45vh;  /* Or any height you want */
+    order: 2;
+  }
+
+  .slide-left h1 {
+    font-size: 2rem;
+  }
+
+  .order-btn {
+    margin-top: 10px;
+  }
+}
+
+
