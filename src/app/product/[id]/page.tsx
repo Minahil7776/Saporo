@@ -33,6 +33,7 @@ const product = allProducts.find((p) => p.id === parseInt(id));
             alt={product.title}
             fill
             style={{ objectFit: "contain" }}
+            placeholder="blur"
           />
         </div>
       )}

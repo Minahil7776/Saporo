@@ -13,7 +13,7 @@ function Offer() {
    <>
     <div className='offer'>
         <div className='offer-bgImg'>
-            <Image src={"/offerBg.png"} alt='img' fill />
+            <Image src={"/offerBg.png"} alt='img' fill  placeholder="blur"/>
         </div>
         <div className='offer-left'>
             <div className='offer-text'>

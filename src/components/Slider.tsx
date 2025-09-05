@@ -52,6 +52,7 @@ useEffect(() => {
           src={data[currentSlide].image}
           alt="img"
           fill
+          placeholder="blur"
         />
       </div>
     </div>

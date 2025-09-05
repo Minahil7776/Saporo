@@ -28,7 +28,7 @@ const Price = ({ price, id, options,title, desc, img}: Props) => {
     title,
     desc,
     img,
-    price: unitPrice,        // final price with options & quantity
+    price: unitPrice * quantity,        // final price with options & quantity
     quantity,
     optionTitle: options ? options[selected].title : null,
   };

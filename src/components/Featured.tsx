@@ -17,6 +17,7 @@ function Featured() {
           <div className='card-img '>
             <Image src={item.img} alt="img" width={250}
   height={250}
+  placeholder="blur"
   style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "8px" }}/>
           </div>
         )}

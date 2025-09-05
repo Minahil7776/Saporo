@@ -35,6 +35,7 @@ export default function Page({ params }: { params: { category: string } }) {
                 alt={item.title}
                 fill
                 className="category-image"
+                  placeholder="blur"
               />
             </div>
           )}
